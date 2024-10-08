@@ -10,7 +10,9 @@ export default function LinkNavLogo() {
         className="flex-shrink-0 flex items-center text-gray-900 dark:text-gray-200"
       >
         <Image src={LogoNavbar} alt="PrakPoll Logo" className="h-8 w-auto" />
-        <p className="text-3xl font-semibold font-poppins">PrakPoll</p>
+        <p className="text-3xl text-black font-semibold font-poppins">
+          PrakPoll
+        </p>
       </Link>
     </>
   );
