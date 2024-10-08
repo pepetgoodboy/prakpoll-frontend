@@ -10,6 +10,11 @@ module.exports = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        primary: "#5046e4",
+      },
+      fontFamily: {
+        jakarta: ["Plus Jakarta Sans", "sans-serif"],
+        poppins: ["Poppins", "sans-serif"],
       },
     },
   },
