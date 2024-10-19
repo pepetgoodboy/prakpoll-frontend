@@ -44,7 +44,7 @@ export default function NavbarSingle() {
             <div className="hidden lg:ml-6 lg:flex lg:space-x-8">
               <LinkNavDesk to="/" text="Beranda" />
               <LinkNavDesk to="/elections" text="Pemilihan Aktif" />
-              {/* <LinkNavDesk to="/result" text="Hasil" /> */}
+              <LinkNavDesk to="/result" text="Hasil" />
             </div>
           </div>
           <div className="flex items-center lg:hidden px-2">
@@ -108,11 +108,11 @@ export default function NavbarSingle() {
                   logo={<GiVote className="h-6 w-6 text-[#5046E4]" />}
                   text="Pemilihan Aktif"
                 />
-                {/* <LinkNavMobile
+                <LinkNavMobile
                   to="/result"
                   logo={<BiTask className="h-6 w-6 text-[#5046E4]" />}
                   text="Hasil"
-                /> */}
+                />
               </nav>
             </div>
             <div className="mt-8">

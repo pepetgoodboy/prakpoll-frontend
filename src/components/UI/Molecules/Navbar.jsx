@@ -47,7 +47,7 @@ export default function Navbar() {
               <LinkNavDesk to="/" text="Beranda" />
               <LinkScrollDesk to="about" text="Tentang Kami" />
               <LinkNavDesk to="/elections" text="Pemilihan Aktif" />
-              {/* <LinkNavDesk to="/result" text="Hasil" /> */}
+              <LinkNavDesk to="/result" text="Hasil" />
               <LinkScrollDesk to="report" text="Lapor" />
             </div>
           </div>
@@ -117,11 +117,11 @@ export default function Navbar() {
                   logo={<GiVote className="h-6 w-6 text-[#5046E4]" />}
                   text="Pemilihan Aktif"
                 />
-                {/* <LinkNavMobile
+                <LinkNavMobile
                   to="/result"
                   logo={<BiTask className="h-6 w-6 text-[#5046E4]" />}
                   text="Hasil"
-                /> */}
+                />
                 <LinkScrollMobile
                   to="report"
                   logo={<GoReport className="h-6 w-6 text-[#5046E4]" />}

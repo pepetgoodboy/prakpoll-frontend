@@ -138,6 +138,12 @@ export default function User() {
                           scope="col"
                           className="px-6 py-3 text-start text-sm font-medium"
                         >
+                          No.
+                        </th>
+                        <th
+                          scope="col"
+                          className="px-6 py-3 text-start text-sm font-medium"
+                        >
                           NPM
                         </th>
                         <th
@@ -177,6 +183,9 @@ export default function User() {
                         users.map((user, index) => (
                           <tr key={index}>
                             <td className="px-6 py-4 whitespace-nowrap text-sm">
+                              {index + 1}
+                            </td>
+                            <td className="px-6 py-4 whitespace-nowrap text-sm">
                               {user.npm}
                             </td>
                             <td className="px-6 py-4 whitespace-nowrap text-sm">
@@ -205,7 +214,7 @@ export default function User() {
                       ) : (
                         <tr>
                           <td
-                            colSpan="6"
+                            colSpan="7"
                             className="px-6 py-4 whitespace-nowrap text-sm text-center font-medium"
                           >
                             No users found
