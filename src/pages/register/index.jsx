@@ -12,7 +12,6 @@ export default function Register() {
   const [npm, setNpm] = useState("");
   const [name, setName] = useState("");
   const [studyProgram, setStudyProgram] = useState("");
-  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const router = useRouter();
@@ -21,13 +20,11 @@ export default function Register() {
   const handleRegister = async (e) => {
     e.preventDefault();
     setIsLoading(true);
-    await new Promise((resolve) => setTimeout(resolve, 1000));
     try {
       const response = await axios.post(`${url}/api/user/register`, {
         npm: npm,
         name: name,
         studyProgram: studyProgram,
-        email: email,
         password: password,
       });
 
@@ -62,7 +59,7 @@ export default function Register() {
           isLoading={isLoading}
         >
           <div className="flex flex-col gap-1 text-sm">
-            <LabelAuth text="NPM" />
+            <LabelAuth text="NPM / ID Pemilih" />
             <InputAuth
               type="number"
               id="npm"
@@ -82,22 +79,12 @@ export default function Register() {
             />
           </div>
           <div className="flex flex-col gap-1 text-sm">
-            <LabelAuth text="Program Studi" />
+            <LabelAuth text="Prodi / Jabatan" />
             <SelectOptionAuth
               id={"studyProgram"}
               name={"studyProgram"}
               value={studyProgram}
               onChange={(e) => setStudyProgram(e.target.value)}
-            />
-          </div>
-          <div className="flex flex-col gap-1 text-sm">
-            <LabelAuth text="Email" />
-            <InputAuth
-              type="email"
-              id="email"
-              name="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
             />
           </div>
           <div className="flex flex-col gap-1 text-sm">

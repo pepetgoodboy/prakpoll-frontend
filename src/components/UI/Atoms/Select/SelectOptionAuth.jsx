@@ -9,7 +9,7 @@ export default function SelectOptionAuth({ id, name, value, onChange }) {
         onChange={onChange}
       >
         <option value="" disabled>
-          Pilih Prodi
+          Pilih
         </option>
         <option value="Akuntansi">Akuntansi</option>
         <option value="Manajemen Informatika">Manajemen Informatika</option>
@@ -17,6 +17,8 @@ export default function SelectOptionAuth({ id, name, value, onChange }) {
         <option value="Manajemen Bisnis Digital">
           Manajemen Bisnis Digital
         </option>
+        <option value="Dosen">Dosen</option>
+        <option value="Akademik">Akademik</option>
       </select>
     </>
   );

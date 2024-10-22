@@ -33,6 +33,11 @@ export default function ResultVote() {
   useEffect(() => {
     if (id) {
       fetchResults();
+      const interval = setInterval(() => {
+        fetchResults();
+      }, 1000);
+
+      return () => clearInterval(interval);
     }
   }, [id]);
 

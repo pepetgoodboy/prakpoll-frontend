@@ -9,7 +9,7 @@ import axios from "axios";
 import { toast } from "react-toastify";
 
 export default function Login() {
-  const [email, setEmail] = useState("");
+  const [npm, setNpm] = useState("");
   const [password, setPassword] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const router = useRouter();
@@ -18,10 +18,9 @@ export default function Login() {
   const handleLogin = async (e) => {
     e.preventDefault();
     setIsLoading(true);
-    await new Promise((resolve) => setTimeout(resolve, 1000));
     try {
       const response = await axios.post(`${url}/api/user/login`, {
-        email: email,
+        npm: npm,
         password: password,
       });
 
@@ -37,8 +36,8 @@ export default function Login() {
     } catch (error) {
       if (error.response) {
         if (error.response.status === 401) {
-          toast.error(error.response.data.message);
           setIsLoading(false);
+          toast.error(error.response.data.message);
         }
       } else {
         toast.error(error.response.data.message);
@@ -69,13 +68,13 @@ export default function Login() {
           isLoading={isLoading}
         >
           <div className="flex flex-col gap-1 text-sm">
-            <LabelAuth text="Email" />
+            <LabelAuth text="NPM / ID Pemilih" />
             <InputAuth
-              type="email"
-              id="email"
-              name="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              type="text"
+              id="npm"
+              name="npm"
+              value={npm}
+              onChange={(e) => setNpm(e.target.value)}
             />
           </div>
           <div className="flex flex-col gap-1 text-sm">
