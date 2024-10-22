@@ -95,7 +95,13 @@ export default function TableUsers({
                         className="px-6 py-4 whitespace-nowrap text-sm text-center font-medium"
                       >
                         {loading ? (
-                          <Spinner visible={true} color="#5046e4" size={100} />
+                          <div className="flex justify-center">
+                            <Spinner
+                              visible={true}
+                              color="#5046e4"
+                              size={100}
+                            />
+                          </div>
                         ) : (
                           "No users found."
                         )}
